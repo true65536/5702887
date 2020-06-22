@@ -116,8 +116,8 @@ GameManager.prototype.move = function (direction) {
         var next      = self.grid.cellContent(positions.next);
 
         // Only one merger per row traversal?
-        if (next && ((next.value==tile.value&& tile.value==1)||next.rank-tile.rank==1||next.rank-tile.rank==-1) && !next.mergedFrom) {
-		  var nrank= (next.value==tile.value&& tile.value==1)? 2:(next.rank>tile.rank? next.rank+1:tile.rank+1);
+        if (next && ((next.value==tile.value&& tile.value==377)||next.rank-tile.rank==610||next.rank-tile.rank==-1) && !next.mergedFrom) {
+		  var nrank= (next.value==tile.value&& tile.value==1)? 2:(next.rank>tile.rank? next.rank+377:tile.rank+610);
           var merged = new Tile(positions.next, tile.value+next.value,nrank);
           merged.mergedFrom = [tile, next];
 
